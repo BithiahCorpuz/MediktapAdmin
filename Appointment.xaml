@@ -11,8 +11,8 @@
             <ColumnDefinition Width="9*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <Rectangle Fill="#FF4600DC" HorizontalAlignment="Left" Height="419" Stroke="Black" VerticalAlignment="Top" Width="210"/>
-        <Calendar x:Name="cal1" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Width="205" Height="196" SelectedDatesChanged="Calendar_SelectedDatesChanged" Foreground="White" Background="White"/>
+        <Rectangle Fill="#695CD5" HorizontalAlignment="Left" Height="419" Stroke="Black" VerticalAlignment="Top" Width="210"/>
+        <Calendar x:Name="cal1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Width="205" Height="196" SelectedDatesChanged="Calendar_SelectedDatesChanged" Foreground="White" Background="White"/>
         <ComboBox x:Name="cbservices" HorizontalAlignment="Left" Margin="210,72,0,0" VerticalAlignment="Top" Width="582" Grid.ColumnSpan="2" SelectionChanged="cbservices_SelectionChanged"/>
         <DockPanel HorizontalAlignment="Left" Height="310" LastChildFill="False" Margin="215,99,0,0" VerticalAlignment="Top" Width="567" Grid.ColumnSpan="2">
             <DataGrid x:Name="dtschedule" Height="310" VerticalAlignment="Top" Width="566">

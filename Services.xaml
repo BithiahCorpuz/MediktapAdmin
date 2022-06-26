@@ -588,23 +588,38 @@
             <ColumnDefinition Width="261*"/>
             <ColumnDefinition Width="533*"/>
         </Grid.ColumnDefinitions>
-        <TabControl HorizontalAlignment="Left" Height="367" Margin="0,52,0,0" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="2">
-            <TabItem x:Name="servicetab" Header="Service" Background="White" Margin="-2,-2,-2,2" Foreground="#FF9B9B9B" Style="{DynamicResource TabItemStyle1}">
-                <Grid Background="#FF5900D8">
-                    <ListView x:Name="lstservicelist" Margin="0,0,340,55" Foreground="#FF3E3E3E">
+        <TabControl HorizontalAlignment="Left" 
+                    Height="367" Margin="0,52,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="792" 
+                    Grid.ColumnSpan="2">
+            
+            <TabItem x:Name="servicetab" Header="Service"
+                     Background="White" 
+                     Margin="-2,-2,-2,2" Foreground="Black"
+                     Style="{DynamicResource TabItemStyle1}">
+                <Grid Background="#695CD5">
+                    <ListView x:Name="lstservicelist"
+                              Margin="0,0,340,55" Foreground="#FF3E3E3E">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn/>
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListView x:Name="lstservicelistaction" HorizontalAlignment="Left" Height="284" Margin="451,0,0,0" VerticalAlignment="Top" Width="335" Background="#FF5900D8">
+                    <ListView x:Name="lstservicelistaction" 
+                              HorizontalAlignment="Left"
+                              Height="284" Margin="451,0,0,0"
+                              VerticalAlignment="Top" 
+                              Width="335" 
+                              Background="#695CD5">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Edit" Width="170">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <Button Content="Edit" Click="Editbtn_Click" CommandParameter="{Binding}"/>
+                                            <Button Content="Edit" 
+                                                    Click="Editbtn_Click" CommandParameter="{Binding}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
@@ -618,44 +633,82 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Button x:Name="btnaddnewservice" Content="Add New" HorizontalAlignment="Left" Margin="10,299,0,0" VerticalAlignment="Top" Width="118" Height="25" Click="btnaddnewservice_Click"/>
+                    <Button x:Name="btnaddnewservice" Content="Add New" 
+                            HorizontalAlignment="Left" Margin="10,299,0,0" 
+                            VerticalAlignment="Top" Width="118" Height="25"
+                            Click="btnaddnewservice_Click"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="promotab" Header="Promo" Background="White" Style="{DynamicResource TabItemStyle3}" Margin="-2,-2,2,2">
-                <Grid Background="#FF5900D8">
-                    <ListView x:Name="lstpromo" HorizontalAlignment="Left" Height="282" VerticalAlignment="Top" Width="431">
+            <TabItem x:Name="promotab" Header="Promo" 
+                     Background="White" 
+                     Style="{DynamicResource TabItemStyle3}"
+                     Margin="-2,-2,2,2">
+
+                <Grid Background="#695CD5">
+                    <ListView x:Name="lstpromo"
+                              HorizontalAlignment="Left" 
+                              Height="282" VerticalAlignment="Top" Width="431">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn/>
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListView x:Name="lstpromoaction" HorizontalAlignment="Left" Height="282" Margin="431,0,0,0" VerticalAlignment="Top" Width="345" Background="#FF5900D8">
+                    <ListView x:Name="lstpromoaction" 
+                              HorizontalAlignment="Left" 
+                              Height="282" Margin="431,0,0,0"
+                              VerticalAlignment="Top"
+                              Width="345"
+                              Background="#FF5900D8">
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="Edit" Width="170">
+                                <GridViewColumn Header="Edit" 
+                                                Width="170">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <Button Content="Edit" Click="EditPromobtn_Click" CommandParameter="{Binding}"/>
+                                            <Button Content="Edit"
+                                                    Click="EditPromobtn_Click" 
+                                                    CommandParameter="{Binding}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Delete" Width="170">
+                                <GridViewColumn Header="Delete" 
+                                                Width="170">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <Button Content="Delete" Click="DeletePromobtn_Click" CommandParameter="{Binding}"/>
+                                            <Button Content="Delete" 
+                                                    Click="DeletePromobtn_Click" 
+                                                    CommandParameter="{Binding}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Button x:Name="btnpromoadd" Content="Add New" HorizontalAlignment="Left" Margin="10,299,0,0" VerticalAlignment="Top" Width="116" Click="btnpromoadd_Click"/>
+                    <Button x:Name="btnpromoadd" 
+                            Content="Add New" 
+                            HorizontalAlignment="Left" 
+                            Margin="10,299,0,0" 
+                            VerticalAlignment="Top" 
+                            Width="116" 
+                            Foreground="White"
+                            Background="#695CD5"
+                            Click="btnpromoadd_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>
-        <Label Content="Services" HorizontalAlignment="Left" Margin="82.207,8,0,0" VerticalAlignment="Top" Width="86" FontSize="22" Grid.Column="1"/>
-        <Button Content="Refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="Button_Click" Background="#FF5900D8" Foreground="White"/>
+        <Label Content="Services" 
+               HorizontalAlignment="Left"
+               Margin="82.207,8,0,0" 
+               VerticalAlignment="Top"
+               Width="86" FontSize="22" 
+               Grid.Column="1"/>
+        <Button Content="Refresh"
+                HorizontalAlignment="Left" 
+                Margin="10,10,0,0" 
+                VerticalAlignment="Top" Width="75"
+                Height="24" Click="Button_Click" Background="#695CD5" 
+                Foreground="White"/>
 
     </Grid>
 </Window>
